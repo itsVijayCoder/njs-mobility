@@ -1,36 +1,229 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NJS Mobility - Petrol Bulk Management System
 
-## Getting Started
+A modern, full-stack petrol bulk management system built with Next.js,
+TypeScript, and shadcn/ui components.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### ✅ Authentication System
+
+-  Role-based login (Admin, Manager, Shift Operators)
+-  Secure JWT-based authentication
+-  User session management
+
+### ✅ Shift Management
+
+-  Create and manage daily shifts (3 shifts per day)
+-  Track shift operators and timings
+-  Pump reading management
+-  Shift checkout with payment reconciliation
+
+### ✅ Fuel Sales Tracking
+
+-  Real-time pump readings (Opening/Closing meters)
+-  Automatic calculation of litres sold
+-  Support for MS (Motor Spirit) and HSD (High Speed Diesel)
+-  Dynamic fuel pricing
+
+### ✅ Store Management
+
+-  Complete inventory system
+-  Product management with barcode support
+-  POS-style sales interface
+-  Low stock alerts
+-  Category-wise product organization
+
+### ✅ Payment Processing
+
+-  Multiple payment modes (Cash, Card, UPI)
+-  Cash denomination tracking
+-  Variance detection and reporting
+-  Payment reconciliation
+
+### ✅ Comprehensive Reports
+
+-  Daily, weekly, monthly sales reports
+-  Fuel vs Store sales breakdown
+-  Payment mode analysis
+-  Performance metrics and trends
+-  Export functionality (PDF/Excel ready)
+
+### ✅ Modern UI/UX
+
+-  Responsive design (Mobile-first approach)
+-  Dark/Light theme support
+-  Real-time notifications
+-  Intuitive navigation
+-  Loading states and error handling
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+-  **Next.js 15** (App Router)
+-  **TypeScript** for type safety
+-  **Tailwind CSS** for styling
+-  **shadcn/ui** for components
+-  **TanStack Query** for state management
+-  **Zustand** for global state
+-  **React Hook Form** with Zod validation
+
+### Backend (Mock Data)
+
+-  **JSON Server** for API simulation
+-  **Mock data** for development and testing
+
+### Development Tools
+
+-  **ESLint** for code quality
+-  **Prettier** for formatting
+-  **Concurrently** for running multiple servers
+
+## 📁 Project Structure
+
+```
+src/
+├── app/                    # Next.js App Router pages
+│   ├── dashboard/         # Dashboard routes
+│   ├── login/             # Authentication
+│   └── admin/             # Admin-only features
+├── components/            # Reusable components
+│   ├── ui/                # shadcn/ui components
+│   ├── forms/             # Form components
+│   ├── layout/            # Layout components
+│   └── dashboard/         # Dashboard components
+├── contexts/              # React contexts
+│   ├── auth-context.tsx   # Authentication state
+│   ├── theme-context.tsx  # Theme management
+│   └── sidebar-context.tsx # UI state
+├── hooks/                 # Custom React hooks
+│   ├── use-shifts.ts      # Shift data management
+│   └── use-store.ts       # Store data management
+├── lib/                   # Utility functions
+│   ├── api-client.ts      # API client
+│   ├── query-client.ts    # TanStack Query config
+│   └── utils.ts           # Common utilities
+├── types/                 # TypeScript interfaces
+│   ├── auth.ts            # Authentication types
+│   ├── shift.ts           # Shift management types
+│   └── store.ts           # Store management types
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+-  Node.js 18+
+-  npm or yarn
 
-## Learn More
+### Installation
 
-To learn more about Next.js, take a look at the following resources:
+1. **Install dependencies**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   npm install
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. **Start the development servers**
 
-## Deploy on Vercel
+   ```bash
+   npm run dev:full
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   This starts both the JSON server (port 3001) and Next.js (port 3000)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. **Access the application**
+   -  Frontend: http://localhost:3000
+   -  API (JSON Server): http://localhost:3001
+
+### Demo Credentials
+
+-  **Admin**: `admin@njsmobility.com` (Any password)
+-  **Manager**: `manager@njsmobility.com` (Any password)
+-  **Operator**: `operator1@njsmobility.com` (Any password)
+
+## 📝 Usage Guide
+
+### 1. **Login**
+
+-  Use any of the demo credentials above
+-  System will redirect to dashboard based on user role
+
+### 2. **Dashboard Overview**
+
+-  View daily sales summary
+-  Check ongoing shifts
+-  Monitor low stock alerts
+-  Access quick actions
+
+### 3. **Shift Management**
+
+-  **Create New Shift**: Start tracking for a new shift
+-  **Record Readings**: Enter pump opening/closing readings
+-  **Process Payments**: Record cash, card, UPI payments
+-  **Close Shift**: Complete shift with reconciliation
+
+### 4. **Store Sales**
+
+-  **Add Products**: Manage inventory items
+-  **Process Sales**: POS-style sales interface
+-  **Track Stock**: Monitor inventory levels
+-  **View Reports**: Sales performance analysis
+
+### 5. **Reports & Analytics**
+
+-  **Daily Reports**: Comprehensive day-wise analysis
+-  **Fuel Analytics**: Pump performance and fuel type breakdown
+-  **Store Metrics**: Product sales and inventory insights
+-  **Payment Analysis**: Payment mode preferences
+
+## 🎯 Key Features Highlight
+
+### Role-Based Access Control
+
+-  **Admin**: Full system access, user management, fuel price updates
+-  **Manager**: Operations oversight, reports, inventory management
+-  **Operators**: Shift operations, fuel readings, store sales
+
+### Real-time Data Sync
+
+-  TanStack Query provides automatic background updates
+-  Optimistic updates for better UX
+-  Error boundary handling
+
+### Modern UI Patterns
+
+-  Sidebar navigation with collapse/expand
+-  Theme switching (Dark/Light mode)
+-  Toast notifications for user feedback
+-  Loading skeletons and states
+-  Mobile-responsive design
+
+### Data Validation
+
+-  Form validation with Zod schemas
+-  Type-safe API interactions
+-  Error handling and user feedback
+
+## 🔧 Development Scripts
+
+```bash
+# Start both JSON server and Next.js
+npm run dev:full
+
+# Start only Next.js
+npm run dev
+
+# Start only JSON server
+npm run json-server
+
+# Build for production
+npm run build
+
+# Run linting
+npm run lint
+```
+
+---
+
+**Built with ❤️ using Next.js, TypeScript, and modern web technologies**

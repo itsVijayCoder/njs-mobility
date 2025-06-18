@@ -5,7 +5,7 @@ import { redirect } from "next/navigation";
 import { useAuth } from "@/contexts/auth-context";
 import { DashboardOverview } from "@/components/dashboard/dashboard-overview";
 
-export default function HomePage() {
+export default function DashboardPage() {
    const { isAuthenticated, isLoading } = useAuth();
 
    if (isLoading) {

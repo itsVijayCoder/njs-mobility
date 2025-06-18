@@ -1,0 +1,379 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "admin@njsmobility.com",
+      "full_name": "Admin User",
+      "role": "admin",
+      "status": "active",
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": "2",
+      "email": "manager@njsmobility.com",
+      "full_name": "Manager User",
+      "role": "manager",
+      "status": "active",
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": "3",
+      "email": "operator1@njsmobility.com",
+      "full_name": "Shift Operator 1",
+      "role": "shift_operator_1",
+      "status": "active",
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  ],
+  "pumps": [
+    {
+      "id": "1",
+      "name": "Pump 1 - MS",
+      "fuel_type": "MS",
+      "status": "active",
+      "current_reading": 125463.5,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-06-18T08:00:00Z"
+    },
+    {
+      "id": "2",
+      "name": "Pump 2 - MS",
+      "fuel_type": "MS",
+      "status": "active",
+      "current_reading": 98432.25,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-06-18T08:00:00Z"
+    },
+    {
+      "id": "3",
+      "name": "Pump 3 - HSD",
+      "fuel_type": "HSD",
+      "status": "active",
+      "current_reading": 87654.75,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-06-18T08:00:00Z"
+    },
+    {
+      "id": "4",
+      "name": "Pump 4 - HSD",
+      "fuel_type": "HSD",
+      "status": "maintenance",
+      "current_reading": 76543,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-06-18T08:00:00Z"
+    }
+  ],
+  "fuel_prices": [
+    {
+      "id": "1",
+      "fuel_type": "MS",
+      "price": 105.25,
+      "effective_date": "2024-06-18",
+      "created_by": "1",
+      "created_at": "2024-06-18T00:00:00Z"
+    },
+    {
+      "id": "2",
+      "fuel_type": "HSD",
+      "price": 89.75,
+      "effective_date": "2024-06-18",
+      "created_by": "1",
+      "created_at": "2024-06-18T00:00:00Z"
+    },
+    {
+      "id": "4bd4",
+      "fuel_type": "MS",
+      "price": 120,
+      "effective_date": "2025-06-18",
+      "created_by": "1",
+      "created_at": "2025-06-18T12:35:16.444Z"
+    },
+    {
+      "id": "0000",
+      "fuel_type": "MS",
+      "price": 101.66,
+      "effective_date": "2025-06-18",
+      "created_by": "1",
+      "created_at": "2025-06-18T14:52:35.708Z"
+    },
+    {
+      "id": "2a20",
+      "fuel_type": "HSD",
+      "price": 93.26,
+      "effective_date": "2025-06-18",
+      "created_by": "1",
+      "created_at": "2025-06-18T14:52:35.709Z"
+    },
+    {
+      "id": "84fe",
+      "fuel_type": "MS",
+      "price": 101.66,
+      "effective_date": "2025-06-18",
+      "created_by": "1",
+      "created_at": "2025-06-18T14:52:58.761Z"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Coca Cola 500ml",
+      "barcode": "8901030725012",
+      "category": "beverage",
+      "price": 25,
+      "cost_price": 18,
+      "stock_quantity": 150,
+      "min_stock_level": 20,
+      "unit": "piece",
+      "tax_rate": 12,
+      "status": "active",
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-06-18T08:00:00Z"
+    },
+    {
+      "id": "2",
+      "name": "Lays Classic 52g",
+      "barcode": "8901396101512",
+      "category": "snacks",
+      "price": 20,
+      "cost_price": 14,
+      "stock_quantity": 200,
+      "min_stock_level": 30,
+      "unit": "piece",
+      "tax_rate": 12,
+      "status": "active",
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-06-18T08:00:00Z"
+    },
+    {
+      "id": "3",
+      "name": "Engine Oil 1L",
+      "barcode": "8901234567890",
+      "category": "automotive",
+      "price": 450,
+      "cost_price": 350,
+      "stock_quantity": 25,
+      "min_stock_level": 5,
+      "unit": "litre",
+      "tax_rate": 18,
+      "status": "active",
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-06-18T08:00:00Z"
+    }
+  ],
+  "shifts": [
+    {
+      "id": "1",
+      "shift_date": "2024-06-18",
+      "shift_number": 1,
+      "operator_id": "3",
+      "status": "completed",
+      "start_time": "2024-06-18T06:00:00Z",
+      "end_time": "2024-06-18T14:00:00Z",
+      "total_fuel_sales": 45650,
+      "total_store_sales": 1250,
+      "total_cash": 25400,
+      "total_digital": 21500,
+      "variance": 0,
+      "notes": "Normal shift operation",
+      "created_at": "2024-06-18T06:00:00Z",
+      "updated_at": "2024-06-18T14:30:00Z"
+    },
+    {
+      "id": "0851",
+      "shift_date": "2025-06-18",
+      "shift_number": 2,
+      "operator_id": "4",
+      "start_time": "2025-06-18T12:43",
+      "notes": "",
+      "status": "ongoing",
+      "total_fuel_sales": 0,
+      "total_store_sales": 0,
+      "total_cash": 0,
+      "total_digital": 0,
+      "variance": 0,
+      "readings": [],
+      "payments": [],
+      "store_sales": []
+    },
+    {
+      "id": "5324",
+      "shift_date": "2025-06-18",
+      "shift_number": 3,
+      "operator_id": "5",
+      "start_time": "2025-06-18T13:51",
+      "notes": "",
+      "status": "ongoing",
+      "total_fuel_sales": 0,
+      "total_store_sales": 0,
+      "total_cash": 0,
+      "total_digital": 0,
+      "variance": 0,
+      "readings": [],
+      "payments": [],
+      "store_sales": []
+    },
+    {
+      "id": "64ae",
+      "shift_date": "2025-06-18",
+      "shift_number": 1,
+      "operator_id": "3",
+      "start_time": "2025-06-18T14:39",
+      "notes": "",
+      "status": "ongoing",
+      "total_fuel_sales": 0,
+      "total_store_sales": 0,
+      "total_cash": 0,
+      "total_digital": 0,
+      "variance": 0,
+      "readings": [],
+      "payments": [],
+      "store_sales": []
+    }
+  ],
+  "shift_readings": [
+    {
+      "id": "1",
+      "shift_id": "1",
+      "pump_id": "1",
+      "opening_reading": 125400,
+      "closing_reading": 125463.5,
+      "litres_sold": 63.5,
+      "rate_per_litre": 105.25,
+      "total_amount": 6683.375,
+      "created_at": "2024-06-18T14:00:00Z"
+    },
+    {
+      "id": "2",
+      "shift_id": "1",
+      "pump_id": "2",
+      "opening_reading": 98350,
+      "closing_reading": 98432.25,
+      "litres_sold": 82.25,
+      "rate_per_litre": 105.25,
+      "total_amount": 8656.8125,
+      "created_at": "2024-06-18T14:00:00Z"
+    },
+    {
+      "id": "3",
+      "shift_id": "1",
+      "pump_id": "3",
+      "opening_reading": 87600,
+      "closing_reading": 87654.75,
+      "litres_sold": 54.75,
+      "rate_per_litre": 89.75,
+      "total_amount": 4913.8125,
+      "created_at": "2024-06-18T14:00:00Z"
+    }
+  ],
+  "shift_payments": [
+    {
+      "id": "1",
+      "shift_id": "1",
+      "payment_mode": "cash",
+      "amount": 25400,
+      "cash_denominations": [
+        {
+          "denomination": 500,
+          "count": 40,
+          "total": 20000
+        },
+        {
+          "denomination": 200,
+          "count": 15,
+          "total": 3000
+        },
+        {
+          "denomination": 100,
+          "count": 20,
+          "total": 2000
+        },
+        {
+          "denomination": 50,
+          "count": 8,
+          "total": 400
+        }
+      ],
+      "created_at": "2024-06-18T14:00:00Z"
+    },
+    {
+      "id": "2",
+      "shift_id": "1",
+      "payment_mode": "card",
+      "amount": 12500,
+      "created_at": "2024-06-18T14:00:00Z"
+    },
+    {
+      "id": "3",
+      "shift_id": "1",
+      "payment_mode": "upi",
+      "amount": 9000,
+      "created_at": "2024-06-18T14:00:00Z"
+    }
+  ],
+  "store_sales": [
+    {
+      "id": "1",
+      "shift_id": "1",
+      "invoice_number": "INV-240618-001",
+      "subtotal": 90,
+      "tax_amount": 10.8,
+      "total_amount": 100.8,
+      "payment_mode": "cash",
+      "customer_name": "Walk-in Customer",
+      "created_at": "2024-06-18T08:30:00Z"
+    },
+    {
+      "id": "2",
+      "shift_id": "1",
+      "invoice_number": "INV-240618-002",
+      "subtotal": 470,
+      "tax_amount": 84.6,
+      "total_amount": 554.6,
+      "payment_mode": "upi",
+      "customer_name": "Rajesh Kumar",
+      "customer_phone": "9876543210",
+      "created_at": "2024-06-18T10:15:00Z"
+    }
+  ],
+  "store_sale_items": [
+    {
+      "id": "1",
+      "sale_id": "1",
+      "product_id": "1",
+      "quantity": 2,
+      "unit_price": 25,
+      "total_price": 50,
+      "tax_amount": 6
+    },
+    {
+      "id": "2",
+      "sale_id": "1",
+      "product_id": "2",
+      "quantity": 2,
+      "unit_price": 20,
+      "total_price": 40,
+      "tax_amount": 4.8
+    },
+    {
+      "id": "3",
+      "sale_id": "2",
+      "product_id": "3",
+      "quantity": 1,
+      "unit_price": 450,
+      "total_price": 450,
+      "tax_amount": 81
+    },
+    {
+      "id": "4",
+      "sale_id": "2",
+      "product_id": "2",
+      "quantity": 1,
+      "unit_price": 20,
+      "total_price": 20,
+      "tax_amount": 3.6
+    }
+  ]
+}
