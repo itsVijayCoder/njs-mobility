@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { Download, FileText, TrendingUp, TrendingDown } from "lucide-react";
-import { MISReport, CashDenomination } from "@/types/checkout";
+import { MISReport } from "@/types/checkout";
 
 interface MISReportViewProps {
    report: MISReport;
